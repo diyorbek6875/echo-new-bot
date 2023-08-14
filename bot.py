@@ -3,7 +3,8 @@ import requests,telegram
 app = Flask(__name__)
 @app.route("/bot")
 def bot():
-    telegram.Bot.deleteWebhook()
+    telegram.Bot.get_webhook_info()
+    telegram.Bot.delete_webhook()
     telegram.Bot.set_webhook(url="https://mardon.pythonanywhere.com/bot")
     if request.method=="POST":
         data=request.get_json()
