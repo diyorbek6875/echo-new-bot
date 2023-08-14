@@ -2,7 +2,7 @@ from flask import Flask,request
 import requests
 app = Flask(__name__)
 @app.route("/bot")
-def hello():
+def bot():
     if request.method=="POST":
         data=request.get_json()
         chat_id=data["message"]["chat"]["id"]
@@ -12,6 +12,6 @@ def hello():
             "text":data["message"]['text']
         }
         requests.get(url,params=payload)
-        return 'OK'
+        return {"message":"ok"}
 if __name__ == "__main__":
     app.run(debug=True)
