@@ -12,3 +12,5 @@ def hello():
             "text":data["message"]['text']
         }
         return requests.get(url,payload)
+if __name__ == "__main__":
+    app.run(debug=True)
