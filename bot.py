@@ -11,6 +11,7 @@ def hello():
             "chat_id":chat_id,
             "text":data["message"]['text']
         }
-        return requests.get(url,payload)
+        requests.get(url,params=payload)
+        return 'OK'
 if __name__ == "__main__":
     app.run(debug=True)
