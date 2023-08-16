@@ -1,5 +1,5 @@
 from flask import Flask,request
-import requests,telegram
+import requests
 app = Flask(__name__)
 @app.route("/bot/", methods=['POST', 'GET'])
 def bot():
