@@ -6,7 +6,7 @@ def bot():
     if request.method=="POST":
         data=request.get_json()
         chat_id=data["message"]["chat"]["id"]
-        url="https://api.telegram.org/bot6190918955:AAED-3niA2qqmsmDZmWFAEDcLKRmmys9eTs/sendMessage"
+        url="https://api.telegram.org/bot6190918955:AAH6JhL8iWSkLg77mvBbMUJQ1QqLahJGD_g/sendMessage"
         payload={
             "chat_id":chat_id,
             "text":"salom"
