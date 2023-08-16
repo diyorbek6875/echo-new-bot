@@ -11,8 +11,8 @@ def bot():
             "chat_id":chat_id,
             "text":"salom"
         }
-        r=requests.post(url,json=payload)
-        print(r.json())
+        r=requests.get(url,params=payload)
+        print(r.status_code, r.text)
         return {"message":"ok"}
 if __name__ == "__main__":
     app.run(debug=True)
